@@ -1,66 +1,34 @@
 
 <h1>waste management and  recycling portal </h1>
-♻️ Waste Management and Recycling Portal
-A responsive and interactive web portal built with HTML, CSS, JavaScript, and PHP that allows users to sign up, log in, and request waste collection and recycling services.
+♻️ Waste Management and Recycling Portal<br>
+A responsive and interactive web portal built with HTML, CSS, JavaScript, and PHP that allows users to sign up, log in, and request waste collection and recycling services.<br>
 
-🌟 Features
-🧑‍💼 User Authentication (Sign Up / Sign In)
-🔒 Login with Google (OAuth 2.0)
-📍 Location Search with OpenStreetMap (Nominatim API)
-🪪 Secure password field with toggle visibility
-📄 Clean and modern UI with TailwindCSS
-📦 Reusable form components
-🌱 Informative sections promoting eco-awareness
-💻 Backend: PHP + MySQL (XAMPP)
-✅ Responsive for mobile & desktop
-🚀 Technologies Used
-HTML5 / CSS3 / JavaScript
-Tailwind CSS for styling
-PHP (with XAMPP)
-MySQL (for user data)
-Google OAuth 2.0
-Font Awesome icons
-🗺️ Live Location Auto-Suggestion with OpenStreetMap
-To enhance user experience while filling the address field, the site uses the Nominatim API (from OpenStreetMap) to provide live suggestions based on user input.
+🌟 Features<br>
+🧑‍💼 User Authentication (Sign Up / Sign In)<br>
+🔒 Login with Google (OAuth 2.0)<br>
+📍 Location Search with OpenStreetMap (Nominatim API)<br>
+🪪 Secure password field with toggle visibility<br>
+📄 Clean and modern UI with TailwindCSs<br>
+📦 Reusable form components<br>
+🌱 Informative sections promoting eco-awareness<br>
+💻 Backend: PHP + MySQL (XAMPP)<br>
+✅ Responsive for mobile & desktop<br>
+🚀 Technologies Used<br>
+HTML5 / CSS3 / JavaScript<br>
+Tailwind CSS for <br>
+PHP (with XAMPP)<br>
+MySQL (for user data)<br>
+Google OAuth 2.0<br>
+Font Awesome icons<br>
+🗺️ Live Location Auto-Suggestion with OpenStreetMap<br>
+To enhance user experience while filling the address field, the site uses the Nominatim API (from OpenStreetMap) to provide live suggestions based on user input.<br>
 
 ✨ How It Works
-When the user starts typing in the address field:
-If the input is more than 2 characters, it triggers an API call.
-Suggestions are shown in a dropdown below the input.
-Clicking a suggestion fills the input box with the full address.
-⚙️ JavaScript Code
-const addressInput = document.getElementById('addressInput');
-const suggestionsBox = document.getElementById('suggestions');
+When the user starts typing in the address field<br>
+If the input is more than 2 characters, it triggers an API call.<br>
+Suggestions are shown in a dropdown below the input.<br>
+Clicking a suggestion fills the input box with the full address.<br>
 
-addressInput.addEventListener('input', async () => {
-  const query = addressInput.value.trim();
-  if (query.length < 3) {
-    suggestionsBox.innerHTML = '';
-    suggestionsBox.classList.add('hidden');
-    return;
-  }
-
-  const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
-  const response = await fetch(url);
-  const data = await response.json();
-
-  suggestionsBox.innerHTML = '';
-  if (data.length > 0) {
-    suggestionsBox.classList.remove('hidden');
-    data.forEach(place => {
-      const item = document.createElement('div');
-      item.className = 'px-4 py-2 cursor-pointer hover:bg-green-100 text-sm';
-      item.textContent = place.display_name;
-      item.addEventListener('click', () => {
-        addressInput.value = place.display_name;
-        suggestionsBox.classList.add('hidden');
-      });
-      suggestionsBox.appendChild(item);
-    });
-  } else {
-    suggestionsBox.classList.add('hidden');
-  }
-});
 
 document.addEventListener('click', (e) => {
   if (!suggestionsBox.contains(e.target) && e.target !== addressInput) {
@@ -83,6 +51,4 @@ The website includes a feedback form that allows users to send their suggestions
 🔐 Gmail SMTP is configured for secure email delivery.
 This ensures all user feedback is received instantly.
 
-About
-No description, website, or topics provided.
-Resources
+
